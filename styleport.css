@@ -10,9 +10,7 @@
   width: 100%;
   height: 800px;
  margin: 0;
-  background: linear-gradient(135deg, #06332a, #06152c, #292729, #ff6600);
-  background-size: 400% 400%;
-  animation: gradientBG 6s ease infinite;
+  background: #0e141d;
   font-family: 'poppins';
   padding-top: 90px;
 }
@@ -250,7 +248,7 @@ margin-left: 40px;
 margin-top: 30px;
 color: #ffffff;
 font-weight: 700;
-font-size: 35px;
+font-size: 45px;
 text-shadow: 2px 2px 8px rgba(0,0,0,0.7);
 
 
@@ -279,7 +277,11 @@ color: white;
 
 
 }
+#about-section{
+height: 800px;
 
+
+}
 
 /*----*/
 #about-section h1{
@@ -371,6 +373,104 @@ color: white;
 
 
 
+/*------*/
+.skills {
+  padding: 60px 10%;
+  text-align: center;
+}
+
+.skills h2 {
+  color: #23d5ab;
+  margin-bottom: 40px;
+}
+
+.skill-item {
+  margin: 20px 0;
+  text-align: left;
+}
+
+.progress {
+  background: #1e293b;
+  height: 12px;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.progress-bar {
+  height: 12px;
+  width: 0%;
+  background: linear-gradient(90deg, #23a6d5, #23d5ab);
+  border-radius: 10px;
+  transition: width 2 sease;
+}
+#skills-section {
+  padding: 60px 10%;
+
+  height: 780px;
+     background: linear-gradient(135deg, #06332a, #06152c, #292729, #ff6600);
+  background-size: 400% 400%;
+  animation: gradientBG 15s ease infinite;
+
+}
+
+.skills-container h2 {
+  font-size: 2.5rem;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.skills-container h2 span {
+  color: #00ffcc;
+}
+
+.skills-intro {
+  text-align: center;
+  color: #ccc;
+  margin-bottom: 40px;
+}
+
+.skill {
+  margin-bottom: 25px;
+}
+
+.skill-name {
+  font-size: 1.1rem;
+  margin-bottom: 8px;
+  display: block;
+}
+
+.skill-name i {
+  color: #00ffcc;
+  margin-right: 8px;
+}
+
+.skill-bar {
+  background: rgba(255,255,255,0.1);
+  border-radius: 20px;
+  overflow: hidden;
+  height: 25px;
+  position: relative;
+}
+
+.skill-fill {
+  background: linear-gradient(135deg, #00ffcc, #0066ff);
+  height: 100%;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding-right: 10px;
+  color: #fff;
+  font-weight: bold;
+  font-size: 0.9rem;
+  box-shadow: 0 0 15px rgba(0,255,204,0.7);
+width:0;
+}
+
+
+
+
+
 /* Responsive */
 @media(max-width:768px) {
  
@@ -442,4 +542,9 @@ color: white;
   
     margin-top: 80px;
   }
+  #about-section{
+height: 950px;
+
+
+}
 }
