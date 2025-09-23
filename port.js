@@ -1,22 +1,32 @@
- const menuBtn = document.querySelector('.menu-btn');
-    const closeBtn = document.querySelector('.close-btn');
-    const mobileNav = document.querySelector('.mobile-nav');
-    const overlay = document.querySelector('.overlay');
+const menuBtn = document.querySelector('.menu-btn');
+const closeBtn = document.querySelector('.close-btn');
+const mobileNav = document.querySelector('.mobile-nav');
+const overlay = document.querySelector('.overlay');
+const navLinks = document.querySelectorAll('.mobile-nav a'); // All menu links
 
-    menuBtn.addEventListener('click', () => {
-      mobileNav.classList.add('active');
-      overlay.classList.add('active');
-    });
+menuBtn.addEventListener('click', () => {
+  mobileNav.classList.add('active');
+  overlay.classList.add('active');
+});
 
-    closeBtn.addEventListener('click', () => {
-      mobileNav.classList.remove('active');
-      overlay.classList.remove('active');
-    });
+closeBtn.addEventListener('click', () => {
+  mobileNav.classList.remove('active');
+  overlay.classList.remove('active');
+});
 
-    overlay.addEventListener('click', () => {
-      mobileNav.classList.remove('active');
-      overlay.classList.remove('active');
-    });
+overlay.addEventListener('click', () => {
+  mobileNav.classList.remove('active');
+  overlay.classList.remove('active');
+});
+
+// ✅ Close menu when a link is clicked
+navLinks.forEach(link => {
+  link.addEventListener('click', () => {
+    mobileNav.classList.remove('active');
+    overlay.classList.remove('active');
+  });
+});
+  
 // Typing Animation
 const texts = ["FRONTEND DEVELOPER", "WEB DESIGNER", "PROGRAMER", "FREELANCER"];
 let count = 0;
@@ -51,3 +61,28 @@ let isDeleting = false;
     setTimeout(type, 100);
   }
 })();
+
+// Skills Bar Animation
+document.addEventListener("DOMContentLoaded", () => {
+  const bars = document.querySelectorAll(".skill-fill");
+
+  bars.forEach(bar => {
+    let targetWidth = bar.getAttribute("style").match(/--target-width:(\d+%)/)[1];
+    bar.style.width = "0";
+
+    setTimeout(() => {
+      bar.style.transition = "width 2s ease";
+      bar.style.width = targetWidth;
+    }, 200);
+  });
+
+
+ 
+});
+
+
+
+
+
+
+
